@@ -3,15 +3,26 @@
     "bin": ["bin/brain-games"],
     "autoload": {
         "psr-4": {
-            "Hexlet\\Code\\": "src/"
-        }
+            "Hexlet\\Code\\": "src"
+        },
+        "files": [
+            "src/Cli.php"
+        ]
     },
     "authors": [
         {
             "name": "Dmitry Smolin"
         }
     ],
+    "scripts": {
+        "phpcs": "phpcs --runtime-set installed_paths vendor/wimg/php-compatibility --standard=PHPCompatibility ."
+    },
     "description": "hexlet brain-games",
     "license": "MIT",
-    "require": {}
+    "require": {
+        "wp-cli/php-cli-tools": "^0.11.18"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.7"
+    }
 }
