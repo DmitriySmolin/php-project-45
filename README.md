@@ -3,4 +3,6 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/8450ab124276e3b12131/maintainability)](https://codeclimate.com/github/DmitriySmolin/php-project-45/maintainability)
 
-[![asciinema](https://asciinema.org/a/5NxTI9nYI6TD34U7opUbrTboe)
+## asciinema recordings:
+
+* ### [brain-even](https://asciinema.org/a/5NxTI9nYI6TD34U7opUbrTboe)
