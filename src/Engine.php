@@ -11,7 +11,7 @@ function engine($assocArray, $task)
     $name = welcome();
     line($task);
     foreach ($assocArray as $key => $value) {
-        $answer = prompt("Question: $key\n Your answer");
+        $answer = prompt("Question: $key\nYour answer");
         if ($answer == $value) {
             line('Correct!');
         } else {

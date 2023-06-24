@@ -1,4 +1,5 @@
 #!/usr/bin/env php
+
 <?php
 
 use function BrainGanes\Gcd\gcd;
@@ -11,4 +12,4 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-print_r(gcd());
+gcd();
