@@ -9,3 +9,4 @@
 * ### [brain-calc](https://asciinema.org/a/xb0KtrfSQ3rD5cAREQdlwNYHF)
 * ### [brain-gcd](https://asciinema.org/a/nn73SZenMFC1UDG1DKm6QzVaD)
 * ### [brain-progression](https://asciinema.org/a/zgJwy3Pae3IKAFAdv1k4AY8tB)
+* ### [brain-prime](https://asciinema.org/a/TzKYY0W06VK4Y7poOIo1yRxIN)
