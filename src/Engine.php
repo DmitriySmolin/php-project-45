@@ -8,7 +8,10 @@ use function cli\prompt;
 
 function engine($assocArray, $task)
 {
-    $name = welcome();
+    line('Welcome to the Brain Game!');
+    $name = prompt('May I have your name?');
+    line("Hello, %s!", $name);
+
     line($task);
     foreach ($assocArray as $key => $value) {
         $answer = prompt("Question: $key\nYour answer");
