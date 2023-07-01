@@ -3,14 +3,15 @@
 namespace BrainGames\Even;
 
 use function BrainGames\Engine\engine;
+use function BrainGames\Engine\initData;
 use function cli\line;
 use function cli\prompt;
 
 function even()
 {
-    $data = [];
-    $count = 0;
-    while ($count < 3) {
+    [$count, $rounds, $data] = initData();
+
+    while ($count < $rounds) {
         $num = rand(1, 100);
         if ($num % 2 === 0) {
             $data[$num] = 'yes';

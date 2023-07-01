@@ -3,12 +3,13 @@
 namespace BrainGanes\Prime;
 
 use function BrainGames\Engine\engine;
+use function BrainGames\Engine\initData;
 
 function prime()
 {
-    $data = [];
-    $count = 0;
-    while ($count < 3) {
+    [$count, $rounds, $data] = initData();
+
+    while ($count < $rounds) {
         $num = rand(1, 100);
         $data[$num] = isPrime($num) ? 'yes' : 'no';
         $count += 1;

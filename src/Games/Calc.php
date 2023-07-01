@@ -3,15 +3,17 @@
 namespace BrainGames\Calc;
 
 use function BrainGames\Engine\engine;
+use function BrainGames\Engine\initData;
 use function cli\line;
 use function cli\prompt;
 
 function calc()
 {
-    $data = [];
+    [$count, $rounds, $data] = initData();
+
     $operations = ['+', '-', '*'];
-    $count = 0;
-    while ($count < 3) {
+
+    while ($count < $rounds) {
 
         $a = rand(1, 100);
         $b = rand(1, 100);

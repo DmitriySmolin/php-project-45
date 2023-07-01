@@ -3,16 +3,17 @@
 namespace BrainGames\Progression;
 
 use function BrainGames\Engine\engine;
+use function BrainGames\Engine\initData;
 
 function progression()
 {
-    $data= [];
-    $count = 0;
-    while ($count < 3) {
+    [$count, $rounds, $data] = initData();
+
+    while ($count < $rounds) {
         $num = rand(1, 25);
         $step = rand(1, 10);
 
-        $count += 1;
+        $count+= 1;
         [$hiddenElement, $result] = createProgression($num, $step);
         $string = implode(' ', $result);
         $data[$string] = $hiddenElement;
