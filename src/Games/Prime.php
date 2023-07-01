@@ -6,16 +6,16 @@ use function BrainGames\Engine\engine;
 
 function prime()
 {
-    $assocArray = [];
+    $data = [];
     $count = 0;
     while ($count < 3) {
         $num = rand(1, 100);
-        $assocArray[$num] = isPrime($num) ? 'yes' : 'no';
+        $data[$num] = isPrime($num) ? 'yes' : 'no';
         $count += 1;
     }
 
     $task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    engine($assocArray, $task);
+    engine($data, $task);
 }
 
 function isPrime($num): bool

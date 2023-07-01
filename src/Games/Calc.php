@@ -8,7 +8,7 @@ use function cli\prompt;
 
 function calc()
 {
-    $assocArray = [];
+    $data = [];
     $operations = ['+', '-', '*'];
     $count = 0;
     while ($count < 3) {
@@ -26,11 +26,11 @@ function calc()
         $c = calcOperation($a, $b, $operation);
         $question = "$a $operation $b";
 
-        $assocArray[$question] = $c;
+        $data[$question] = $c;
         $count += 1;
     }
     $task = 'What is the result of the expression?';
-    engine($assocArray, $task);
+    engine($data, $task);
 }
 
 function calcOperation($a, $b, $operation)

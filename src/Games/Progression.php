@@ -6,7 +6,7 @@ use function BrainGames\Engine\engine;
 
 function progression()
 {
-    $arrayAssoc = [];
+    $data= [];
     $count = 0;
     while ($count < 3) {
         $num = rand(1, 25);
@@ -15,10 +15,10 @@ function progression()
         $count += 1;
         [$hiddenElement, $result] = createProgression($num, $step);
         $string = implode(' ', $result);
-        $arrayAssoc[$string] = $hiddenElement;
+        $data[$string] = $hiddenElement;
     }
     $task = 'What number is missing in the progression?';
-    engine($arrayAssoc, $task);
+    engine($data, $task);
 }
 
 function createProgression($num, $step): array

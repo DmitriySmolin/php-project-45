@@ -6,7 +6,7 @@ use function BrainGames\Engine\engine;
 
 function gcd()
 {
-    $arrayAssoc = [];
+    $data= [];
     $count = 0;
 
     while ($count < 3) {
@@ -17,11 +17,11 @@ function gcd()
         $min = min($a, $b);
 
         $question = "$a $b";
-        $arrayAssoc[$question] = getGcd($min, $max);
+        $data[$question] = getGcd($min, $max);
         $count += 1;
     }
     $task = 'Find the greatest common divisor of given numbers.';
-    engine($arrayAssoc, $task);
+    engine($data, $task);
 }
 
 function getGcd(int $min, int $max): int
