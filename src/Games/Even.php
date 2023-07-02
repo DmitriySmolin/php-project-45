@@ -18,7 +18,7 @@ function even(): void
     engine($data, $task);
 }
 
-function isEven($num): bool
+function isEven(int $num): bool
 {
     return $num % 2 === 0;
 }

@@ -19,7 +19,7 @@ function prime(): void
     engine($data, $task);
 }
 
-function isPrime($num): bool
+function isPrime(int $num): bool
 {
     $result = [];
     for ($i = 1; $i <= $num; $i++) {

@@ -22,7 +22,7 @@ function progression(): void
     engine($data, $task);
 }
 
-function createProgression($num, $step): array
+function createProgression(int $num, int $step): array
 {
     $result = [];
     for ($i = $num, $j = 1; $j <= 10; $j += 1, $i += $step) {
