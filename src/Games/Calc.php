@@ -34,10 +34,10 @@ function calcOperation($firstNum, $secondNum, $operation)
 {
     switch ($operation) {
         case '*':
-        return $firstNum * $secondNum;
+            return $firstNum * $secondNum;
         case '+':
-        return $firstNum + $secondNum;
+            return $firstNum + $secondNum;
         case '-':
-        return $firstNum - $secondNum;
+            return $firstNum - $secondNum;
     }
 }
