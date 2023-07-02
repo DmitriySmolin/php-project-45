@@ -4,8 +4,6 @@ namespace BrainGames\Calc;
 
 use function BrainGames\Engine\engine;
 use function BrainGames\Engine\initData;
-use function cli\line;
-use function cli\prompt;
 
 function calc(): void
 {
