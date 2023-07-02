@@ -26,7 +26,6 @@ function gcd(): void
 
 function getGcd(int $min, int $max): int
 {
-
     for ($i = $max; $i > 0; $i -= 1) {
 
         if ($max % $i === 0 && $min % $i === 0) {
@@ -34,6 +33,5 @@ function getGcd(int $min, int $max): int
         }
 
     }
-
     return 1;
 }
