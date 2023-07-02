@@ -5,7 +5,7 @@ namespace BrainGames\Progression;
 use function BrainGames\Engine\engine;
 use function BrainGames\Engine\initData;
 
-function progression()
+function progression(): void
 {
     [$count, $rounds, $data] = initData();
 

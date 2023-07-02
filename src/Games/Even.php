@@ -7,7 +7,7 @@ use function BrainGames\Engine\initData;
 use function cli\line;
 use function cli\prompt;
 
-function even()
+function even(): void
 {
     [$count, $rounds, $data] = initData();
 

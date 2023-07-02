@@ -5,7 +5,7 @@ namespace BrainGanes\Prime;
 use function BrainGames\Engine\engine;
 use function BrainGames\Engine\initData;
 
-function prime()
+function prime(): void
 {
     [$count, $rounds, $data] = initData();
 

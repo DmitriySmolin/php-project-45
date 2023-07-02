@@ -5,7 +5,7 @@ namespace BrainGanes\Gcd;
 use function BrainGames\Engine\engine;
 use function BrainGames\Engine\initData;
 
-function gcd()
+function gcd(): void
 {
     [$count, $rounds, $data] = initData();
 

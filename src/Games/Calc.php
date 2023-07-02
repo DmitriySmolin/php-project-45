@@ -7,7 +7,7 @@ use function BrainGames\Engine\initData;
 use function cli\line;
 use function cli\prompt;
 
-function calc()
+function calc(): void
 {
     [$count, $rounds, $data] = initData();
 
@@ -15,35 +15,33 @@ function calc()
 
     while ($count < $rounds) {
 
-        $a = rand(1, 100);
-        $b = rand(1, 100);
-        if ($a < $b) {
-            $temp = $b;
-            $b = $a;
-            $a = $temp;
+        $firstNum = rand(1, 100);
+        $secondNum = rand(1, 100);
+        if ($firstNum < $secondNum) {
+            [$firstNum, $secondNum] = [$secondNum, $firstNum];
         }
         $randomKey = array_rand($operations);
         $operation = $operations[$randomKey];
 
-        $c = calcOperation($a, $b, $operation);
-        $question = "$a $operation $b";
+        $result = calcOperation($firstNum, $secondNum, $operation);
+        $question = "$firstNum $operation $secondNum";
 
-        $data[$question] = $c;
+        $data[$question] = $result;
         $count += 1;
     }
     $task = 'What is the result of the expression?';
     engine($data, $task);
 }
 
-function calcOperation($a, $b, $operation)
+function calcOperation($firstNum, $secondNum, $operation)
 {
     switch ($operation) {
         case '*':
-            return $a * $b;
+            return $firstNum * $secondNum;
         case '+':
-            return $a + $b;
+            return $firstNum + $secondNum;
         case '-':
-            return $a - $b;
+            return $firstNum - $secondNum;
     }
 }
 
