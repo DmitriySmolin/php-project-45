@@ -26,8 +26,10 @@ function engine($data, $task)
         if ($currentAnswer == $answer) {
             line('Correct!');
         } else {
-            line("$currentAnswer is wrong answer;(. Correct answer was $answer .
-        Let's try again, $name!");
+            line(
+                "$currentAnswer is wrong answer;(. Correct answer was $answer .
+        Let's try again, $name!"
+            );
             return false;
         }
     }

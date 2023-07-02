@@ -12,7 +12,6 @@ function calc(): void
     $operations = ['+', '-', '*'];
 
     while ($count < $rounds) {
-
         $firstNum = rand(1, 100);
         $secondNum = rand(1, 100);
         if ($firstNum < $secondNum) {
@@ -34,12 +33,12 @@ function calc(): void
 function calcOperation($firstNum, $secondNum, $operation)
 {
     switch ($operation) {
-        case '*':
-            return $firstNum * $secondNum;
-        case '+':
-            return $firstNum + $secondNum;
-        case '-':
-            return $firstNum - $secondNum;
+    case '*':
+        return $firstNum * $secondNum;
+    case '+':
+        return $firstNum + $secondNum;
+    case '-':
+        return $firstNum - $secondNum;
     }
 }
 
