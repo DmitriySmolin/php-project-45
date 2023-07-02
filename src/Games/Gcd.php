@@ -10,13 +10,13 @@ function gcd(): void
     [$count, $rounds, $data] = initData();
 
     while ($count < $rounds) {
-        $a = rand(1, 100);
-        $b = rand(1, 100);
+        $firstNum = rand(1, 100);
+        $secondNum = rand(1, 100);
 
-        $max = max($a, $b);
-        $min = min($a, $b);
+        $max = max($firstNum, $secondNum);
+        $min = min($firstNum, $secondNum);
 
-        $question = "$a $b";
+        $question = "$firstNum $secondNum";
         $data[$question] = getGcd($min, $max);
         $count += 1;
     }
@@ -26,18 +26,14 @@ function gcd(): void
 
 function getGcd(int $min, int $max): int
 {
-    $result = [];
 
-    for ($i = 1; $i <= $min; $i++) {
-        if ($max % $min === 0) {
-            return $min;
-        }
+    for ($i = $max; $i > 0; $i -= 1) {
 
         if ($max % $i === 0 && $min % $i === 0) {
-            $result[] = $i;
+            return $i;
         }
 
     }
 
-    return max($result);
+    return 1;
 }
