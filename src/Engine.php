@@ -14,7 +14,7 @@ function initData(): array
     return [$count, $rounds, $data];
 }
 
-function engine($data, $task)
+function engine(array $data, string $task): bool|null
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
@@ -35,4 +35,6 @@ function engine($data, $task)
     }
 
     line("Congratulations, $name!");
+
+    return null;
 }

@@ -30,7 +30,7 @@ function calc(): void
     engine($data, $task);
 }
 
-function calcOperation(int $firstNum, int $secondNum, string $operation)
+function calcOperation(int $firstNum, int $secondNum, string $operation): float|int|null
 {
     if ($operation === '*') {
         return $firstNum * $secondNum;
@@ -39,4 +39,5 @@ function calcOperation(int $firstNum, int $secondNum, string $operation)
     } elseif ($operation === '-') {
         return $firstNum - $secondNum;
     }
+    return null;
 }
