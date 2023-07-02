@@ -32,12 +32,17 @@ function calc(): void
 
 function calcOperation($firstNum, $secondNum, $operation)
 {
+    $result = null;
     switch ($operation) {
-        case '*':
-            return $firstNum * $secondNum;
-        case '+':
-            return $firstNum + $secondNum;
-        case '-':
-            return $firstNum - $secondNum;
+    case '*':
+        $result = $firstNum * $secondNum;
+        break;
+    case '+':
+        $result = $firstNum + $secondNum;
+        break;
+    case '-':
+        $result = $firstNum - $secondNum;
+        break;
     }
+    return $result;
 }
