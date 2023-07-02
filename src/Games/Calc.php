@@ -30,19 +30,13 @@ function calc(): void
     engine($data, $task);
 }
 
-function calcOperation($firstNum, $secondNum, $operation)
+function calcOperation(int $firstNum, int $secondNum, string $operation)
 {
-    $result = null;
-    switch ($operation) {
-    case '*':
-        $result = $firstNum * $secondNum;
-        break;
-    case '+':
-        $result = $firstNum + $secondNum;
-        break;
-    case '-':
-        $result = $firstNum - $secondNum;
-        break;
+    if ($operation === '*') {
+        return $firstNum * $secondNum;
+    } elseif ($operation === '+') {
+        return $firstNum + $secondNum;
+    } elseif ($operation === '-') {
+        return $firstNum - $secondNum;
     }
-    return $result;
 }
