@@ -8,31 +8,35 @@ use const BrainGames\Engine\ROUNDS;
 
 function progression(): void
 {
+    $question = 'What number is missing in the progression?';
     $data = [];
-    $count = 0;
 
-    while ($count < ROUNDS) {
+    for ($i = 0; $i < ROUNDS; $i += 1) {
         $num = rand(1, 25);
         $step = rand(1, 10);
 
-        $count += 1;
-        [$hiddenElement, $result] = createProgression($num, $step);
-        $string = implode(' ', $result);
+        [$numericalSequence, $hiddenElement] = replaceElement(createProgression($num, $step));
+        $string = implode(' ', $numericalSequence);
         $data[$string] = $hiddenElement;
     }
-    $task = 'What number is missing in the progression?';
-    engine($data, $task);
+    engine($data, $question);
 }
+
 
 function createProgression(int $num, int $step): array
 {
-    $result = [];
+    $numericalSequence = [];
     for ($i = $num, $j = 1; $j <= 10; $j += 1, $i += $step) {
-        $result[] = $i;
+        $numericalSequence[] = $i;
     }
-    $hiddenKey = rand(1, 9);
-    $hiddenElement = $result[$hiddenKey];
-    $result[$hiddenKey] = '..';
 
-    return [$hiddenElement, $result];
+    return $numericalSequence;
+}
+
+function replaceElement(array $data): array
+{
+    $randomKey = rand(1, 9);
+    $hiddenElement = $data[$randomKey];
+    $data[$randomKey] = '..';
+    return [$data, $hiddenElement];
 }
