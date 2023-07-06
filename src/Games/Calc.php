@@ -8,38 +8,31 @@ use const BrainGames\Engine\ROUNDS;
 
 function calc(): void
 {
+    $question = 'What is the result of the expression?';
     $data = [];
-    $count = 0;
-
     $operations = ['+', '-', '*'];
 
-    while ($count < ROUNDS) {
+    for ($i = 0; $i < ROUNDS; $i += 1) {
         $firstNum = rand(1, 100);
         $secondNum = rand(1, 100);
-        if ($firstNum < $secondNum) {
-            [$firstNum, $secondNum] = [$secondNum, $firstNum];
-        }
+
         $randomKey = array_rand($operations);
         $operation = $operations[$randomKey];
 
         $result = calcOperation($firstNum, $secondNum, $operation);
-        $question = "$firstNum $operation $secondNum";
+        $questionContent = "$firstNum $operation $secondNum";
 
-        $data[$question] = $result;
-        $count += 1;
+        $data[$questionContent] = $result;
     }
-    $task = 'What is the result of the expression?';
-    engine($data, $task);
+    engine($data, $question);
 }
 
 function calcOperation(int $firstNum, int $secondNum, string $operation): int|null
 {
-    if ($operation === '*') {
-        return $firstNum * $secondNum;
-    } elseif ($operation === '+') {
-        return $firstNum + $secondNum;
-    } elseif ($operation === '-') {
-        return $firstNum - $secondNum;
-    }
-    return null;
+    return match ($operation) {
+        '*' => $firstNum * $secondNum,
+        '+' => $firstNum + $secondNum,
+        '-' => $firstNum - $secondNum,
+        default => null,
+    };
 }
