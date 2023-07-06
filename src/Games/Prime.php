@@ -3,6 +3,7 @@
 namespace BrainGanes\Prime;
 
 use function BrainGames\Engine\engine;
+
 use const BrainGames\Engine\ROUNDS;
 
 function prime(): void
