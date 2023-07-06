@@ -20,7 +20,6 @@ function gcd(): void
 
         $questionContent = "$firstNum $secondNum";
         $data[$questionContent] = getGcd($min, $max);
-        $count += 1;
     }
     engine($data, $question);
 }
