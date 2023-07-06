@@ -8,26 +8,24 @@ use const BrainGames\Engine\ROUNDS;
 
 function prime(): void
 {
+    $question = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $data = [];
-    $count = 0;
 
-    while ($count < ROUNDS) {
+    for ($i = 0; $i < ROUNDS; $i += 1) {
         $num = rand(1, 100);
         $data[$num] = isPrime($num) ? 'yes' : 'no';
-        $count += 1;
     }
 
-    $task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    engine($data, $task);
+    engine($data, $question);
 }
 
 function isPrime(int $num): bool
 {
-    $result = [];
-    for ($i = 1; $i <= $num; $i++) {
+    $dividers = [];
+    for ($i = 2; $i <= $num; $i++) {
         if ($num % $i === 0) {
-            $result[] = $i;
+            $dividers[] = $i;
         }
     }
-    return count($result) === 2;
+    return count($dividers) === 1;
 }
