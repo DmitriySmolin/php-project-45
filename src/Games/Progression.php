@@ -3,13 +3,14 @@
 namespace BrainGames\Progression;
 
 use function BrainGames\Engine\engine;
-use function BrainGames\Engine\initData;
+use const BrainGames\Engine\ROUNDS;
 
 function progression(): void
 {
-    [$count, $rounds, $data] = initData();
+    $data = [];
+    $count = 0;
 
-    while ($count < $rounds) {
+    while ($count < ROUNDS) {
         $num = rand(1, 25);
         $step = rand(1, 10);
 

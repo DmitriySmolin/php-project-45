@@ -3,15 +3,16 @@
 namespace BrainGames\Calc;
 
 use function BrainGames\Engine\engine;
-use function BrainGames\Engine\initData;
+use const BrainGames\Engine\ROUNDS;
 
 function calc(): void
 {
-    [$count, $rounds, $data] = initData();
+    $data = [];
+    $count = 0;
 
     $operations = ['+', '-', '*'];
 
-    while ($count < $rounds) {
+    while ($count < ROUNDS) {
         $firstNum = rand(1, 100);
         $secondNum = rand(1, 100);
         if ($firstNum < $secondNum) {

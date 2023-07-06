@@ -3,13 +3,14 @@
 namespace BrainGanes\Gcd;
 
 use function BrainGames\Engine\engine;
-use function BrainGames\Engine\initData;
+use const BrainGames\Engine\ROUNDS;
 
 function gcd(): void
 {
-    [$count, $rounds, $data] = initData();
+    $data = [];
+    $count = 0;
 
-    while ($count < $rounds) {
+    while ($count < ROUNDS) {
         $firstNum = rand(1, 100);
         $secondNum = rand(1, 100);
 
