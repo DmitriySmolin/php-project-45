@@ -1,9 +1,7 @@
 <?php
 
 namespace BrainGames\Calc;
-
 use function BrainGames\Engine\engine;
-
 use const BrainGames\Engine\ROUNDS;
 
 function calc(): void

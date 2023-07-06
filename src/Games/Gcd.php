@@ -1,9 +1,7 @@
 <?php
 
 namespace BrainGanes\Gcd;
-
 use function BrainGames\Engine\engine;
-
 use const BrainGames\Engine\ROUNDS;
 
 function gcd(): void

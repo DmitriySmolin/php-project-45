@@ -1,9 +1,7 @@
 <?php
 
 namespace BrainGames\Progression;
-
 use function BrainGames\Engine\engine;
-
 use const BrainGames\Engine\ROUNDS;
 
 function progression(): void
