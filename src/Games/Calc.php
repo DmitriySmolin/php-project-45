@@ -29,7 +29,7 @@ function calc(): void
 }
 
 
-function calcOperation(int $firstNum, int $secondNum, string $operation): int|null
+function calcOperation(int $firstNum, int $secondNum, string $operation): int
 {
     return match ($operation) {
         '*' => $firstNum * $secondNum,
