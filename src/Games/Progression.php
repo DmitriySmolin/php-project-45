@@ -14,13 +14,13 @@ function progression(): void
     for ($i = 0; $i < ROUNDS; $i += 1) {
         $num = rand(1, 25);
         $step = rand(1, 10);
+        $randomKey = rand(1, 9);
 
         $numericalSequence = createProgression($num, $step);
-        $randomKey = rand(1, 9);
-        $hiddenElement = $numericalSequence[$randomKey];
+        $correctAnswer = $numericalSequence[$randomKey];
         $numericalSequence[$randomKey] = '..';
-        $string = implode(' ', $numericalSequence);
-        $data[$string] = $hiddenElement;
+        $questionContent = implode(' ', $numericalSequence);
+        $data[$questionContent] = $correctAnswer;
     }
     engine($data, $question);
 }
