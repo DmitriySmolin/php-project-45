@@ -2,9 +2,11 @@
 
 namespace BrainGames\Calc;
 
+use Exception;
 use function BrainGames\Engine\engine;
 
 use const BrainGames\Engine\ROUNDS;
+
 
 function calc(): void
 {
@@ -17,15 +19,15 @@ function calc(): void
         $secondNum = rand(1, 100);
 
         $randomKey = array_rand($operations);
-        $operation = $operations[$randomKey];
 
-        $result = calcOperation($firstNum, $secondNum, $operation);
-        $questionContent = "$firstNum $operation $secondNum";
+        $result = calcOperation($firstNum, $secondNum, $operations[$randomKey]);
+        $questionContent = "$firstNum $operations[$randomKey] $secondNum";
 
         $data[$questionContent] = $result;
     }
     engine($data, $question);
 }
+
 
 function calcOperation(int $firstNum, int $secondNum, string $operation): int|null
 {
@@ -33,6 +35,6 @@ function calcOperation(int $firstNum, int $secondNum, string $operation): int|nu
         '*' => $firstNum * $secondNum,
         '+' => $firstNum + $secondNum,
         '-' => $firstNum - $secondNum,
-        default => null,
+        default => throw new Exception('There is no such arithmetic operation...'),
     };
 }

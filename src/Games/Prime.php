@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGanes\Prime;
+namespace BrainGames\Prime;
 
 use function BrainGames\Engine\engine;
 
@@ -21,11 +21,15 @@ function prime(): void
 
 function isPrime(int $num): bool
 {
-    $dividers = [];
-    for ($i = 2; $i <= $num; $i++) {
+    if ($num === 1) {
+        return false;
+    }
+
+    for ($i = 2; $i <= sqrt($num); $i += 1) {
         if ($num % $i === 0) {
-            $dividers[] = $i;
+            return false;
         }
     }
-    return count($dividers) === 1;
+
+    return true;
 }

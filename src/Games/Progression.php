@@ -15,7 +15,10 @@ function progression(): void
         $num = rand(1, 25);
         $step = rand(1, 10);
 
-        [$numericalSequence, $hiddenElement] = replaceElement(createProgression($num, $step));
+        $numericalSequence = createProgression($num, $step);
+        $randomKey = rand(1, 9);
+        $hiddenElement = $numericalSequence[$randomKey];
+        $numericalSequence[$randomKey] = '..';
         $string = implode(' ', $numericalSequence);
         $data[$string] = $hiddenElement;
     }
@@ -31,12 +34,4 @@ function createProgression(int $num, int $step): array
     }
 
     return $numericalSequence;
-}
-
-function replaceElement(array $data): array
-{
-    $randomKey = rand(1, 9);
-    $hiddenElement = $data[$randomKey];
-    $data[$randomKey] = '..';
-    return [$data, $hiddenElement];
 }
