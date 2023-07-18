@@ -18,10 +18,10 @@ function calc(): void
         $firstNum = rand(1, 100);
         $secondNum = rand(1, 100);
 
-        $randomKey = array_rand($operations);
+        $operation = $operations[array_rand($operations)];
 
-        $result = calcOperation($firstNum, $secondNum, $operations[$randomKey]);
-        $questionContent = "$firstNum $operations[$randomKey] $secondNum";
+        $result = calcOperation($firstNum, $secondNum, $operation);
+        $questionContent = "$firstNum $operation $secondNum";
 
         $data[$questionContent] = $result;
     }
