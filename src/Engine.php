@@ -15,7 +15,8 @@ function engine(array $data, string $task): void
 
     line($task);
     foreach ($data as $question => $answer) {
-        $currentAnswer = prompt("Question: $question\nYour answer");
+        line("Question: $question");
+        $currentAnswer = prompt("Your answer");
         if ($currentAnswer != $answer) {
             line("$currentAnswer is wrong answer;(. Correct answer was $answer. Let's try again, $name!");
             return;
