@@ -4,14 +4,14 @@ namespace BrainGames\Gcd;
 
 use function BrainGames\Engine\engine;
 
-use const BrainGames\Engine\ROUNDS;
+use const BrainGames\Engine\ROUNDS_COUNT;
 
-function gcd(): void
+function run(): void
 {
     $question = 'Find the greatest common divisor of given numbers.';
     $data = [];
 
-    for ($i = 0; $i < ROUNDS; $i += 1) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i += 1) {
         $firstNum = rand(1, 100);
         $secondNum = rand(1, 100);
 

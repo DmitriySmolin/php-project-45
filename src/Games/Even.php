@@ -4,14 +4,14 @@ namespace BrainGames\Even;
 
 use function BrainGames\Engine\engine;
 
-use const BrainGames\Engine\ROUNDS;
+use const BrainGames\Engine\ROUNDS_COUNT;
 
-function even(): void
+function run(): void
 {
     $question = 'Answer "yes" if the number is even, otherwise answer "no".';
     $data = [];
 
-    for ($i = 0; $i < ROUNDS; $i += 1) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i += 1) {
         $num = rand(1, 100);
         $data[$num] = isEven($num) ? 'yes' : 'no';
     }
