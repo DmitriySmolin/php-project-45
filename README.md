@@ -10,8 +10,8 @@ Brain-games is a set of mini-math games launched from the console
 ## Requirements
 
 * php 7.1+
-* composer
-* make
+* composer 2.2.6
+* make 4.3
 
 ## Setup
 
@@ -28,12 +28,6 @@ $ make install
 - brain-gcd - find the greatest common divisor of two given numbers
 - brain-progression - find a missed number in the arithmetic progression
 - brain-prime - specify if the number is prime or not
-
-## Usage
-Firstly you need add `~/.composer/vendor/bin` to your PATH
-
-`$ bin/'game name'`
-ex. `$ bin/brain-prime`
 
 ## Asciinema recordings:
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\Prime;
+namespace Games\BrainGames\Prime;
 
-use function BrainGames\Engine\engine;
+use function BrainGames\Engine\runEngine;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
 
@@ -16,7 +16,7 @@ function run(): void
         $data[$num] = isPrime($num) ? 'yes' : 'no';
     }
 
-    engine($data, $question);
+    runEngine($data, $question);
 }
 
 function isPrime(int $num): bool

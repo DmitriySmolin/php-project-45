@@ -1,10 +1,10 @@
 <?php
 
-namespace BrainGames\Calc;
+namespace Games\BrainGames\Calc;
 
 use Exception;
 
-use function BrainGames\Engine\engine;
+use function BrainGames\Engine\runEngine;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
 
@@ -25,7 +25,7 @@ function run(): void
 
         $data[$questionContent] = $result;
     }
-    engine($data, $question);
+    runEngine($data, $question);
 }
 
 

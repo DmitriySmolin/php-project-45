@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\Progression;
+namespace Games\BrainGames\Progression;
 
-use function BrainGames\Engine\engine;
+use function BrainGames\Engine\runEngine;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
 
@@ -22,7 +22,7 @@ function run(): void
         $questionContent = implode(' ', $numericalSequence);
         $data[$questionContent] = $correctAnswer;
     }
-    engine($data, $question);
+    runEngine($data, $question);
 }
 
 

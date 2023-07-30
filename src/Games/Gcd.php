@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\Gcd;
+namespace Games\BrainGames\Gcd;
 
-use function BrainGames\Engine\engine;
+use function BrainGames\Engine\runEngine;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
 
@@ -21,7 +21,7 @@ function run(): void
         $questionContent = "$firstNum $secondNum";
         $data[$questionContent] = getGcd($min, $max);
     }
-    engine($data, $question);
+    runEngine($data, $question);
 }
 
 function getGcd(int $min, int $max): int

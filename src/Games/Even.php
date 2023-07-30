@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\Even;
+namespace Games\BrainGames\Even;
 
-use function BrainGames\Engine\engine;
+use function BrainGames\Engine\runEngine;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
 
@@ -15,7 +15,7 @@ function run(): void
         $num = rand(1, 100);
         $data[$num] = isEven($num) ? 'yes' : 'no';
     }
-    engine($data, $question);
+    runEngine($data, $question);
 }
 
 function isEven(int $num): bool
