@@ -1,6 +1,6 @@
 <?php
 
-namespace Games\BrainGames\Calc;
+namespace BrainGames\Games\Calc;
 
 use Exception;
 
