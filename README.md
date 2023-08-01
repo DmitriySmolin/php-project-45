@@ -12,6 +12,7 @@ Brain-games is a set of mini-math games launched from the console
 * php 7.1+
 * composer 2.2.6
 * make 4.3
+* wp-cli/php-cli-tools 0.11.18
 
 ## Setup
 
